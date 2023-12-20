@@ -1,0 +1,495 @@
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#page_header{
+    background-color: rgba(25, 25, 25, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 50px;
+    width: 100%;
+    display: flex;
+    z-index: 2;
+}
+.logo {
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight: var(--fw-700);
+    display: flex;
+    color: #f5f4f2;
+    align-items: center;
+    gap: 5px;
+  }
+
+#nav_bar{
+    position: absolute;
+    right: 10%;
+    padding: 0;
+}
+
+#nav_list{
+    list-style: none;
+    padding: 0;
+}
+.nav_link{
+    text-decoration: none;
+    display: inline;
+    margin: 10px;
+    font-weight: 700;
+    color: white;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.nav_link:hover , .active{
+    background-color: #ffc61a;
+    border-radius: 20px;
+    color: black;
+}
+
+main{
+    position: absolute;
+    /* margin-top: 86px; */
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+#hero{
+    background-image: url('pics/street.png');
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+    width: 100%;
+    line-height: 2px;
+    background-color: rgba(0, 0, 0, 1);
+    height: 676px;
+}
+
+#hero h1{
+    font-size: 48px;
+}
+
+#hero h3{
+    font-size: 24px;
+    color: #ffc61a;
+}
+
+#hero_text{
+    position: relative;
+    color: white;
+    top: 200px;
+}
+
+#hero_text p{
+    letter-spacing: 0.5em;
+}
+
+#hero>img{
+    width: 675px;
+    position: relative;
+    left: 110px;
+    top: 220px;
+}
+
+#about{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 30px 50px 250px;
+    background-color: #ffc61a;
+}
+
+#about_text{
+    width: 485px;
+    margin-right: 200px;
+}
+
+.read_more{
+    height: 45px;
+    width: 140px;
+    color: white;
+    background-color: black;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    border-color: black;
+}
+
+#about h4{
+    font-size: 28px;
+    margin: 0;
+}
+
+#about h1{
+    font-size: 48px;
+    margin: 0;
+}
+
+#book_form{
+    height: 400px;
+    background-color: white;
+}
+
+#book_form form{
+    padding: 10px 20px;
+}
+
+#book_form input{
+    height: 30px;
+    width: 130px;
+    margin: 15px 5px;
+    font-size: 18px;
+    font-weight: 600;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#book_form select{
+    height: 30px;
+    width: 270px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#book_form input[type="submit"]{
+    height: 45px;
+    width: 280px;
+    color: white;
+    background-color: black;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    border-color: black;
+    border: solid 2px black;
+}
+
+#form_heading{
+    color: white;
+    background-color: black;
+    margin: 0px;
+    padding: 15px 20px;
+    font-size: 32px;
+}
+
+#choose{
+    padding: 50px 0;
+}
+
+#choose h3{
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+    line-height: 0.7;
+}
+#choose>h3:first-of-type{
+    color: #ffc61a;
+}
+#choose>h3:last-of-type{
+    margin-bottom: 50px;
+}
+
+#choose_class{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+.card_contianer img{
+    width: 366px;
+    position: relative;
+    left: 20px;
+    z-index: 1;
+    /* top: 100px; */
+}
+
+
+.card{
+    position: relative;
+    top: -100px;
+    padding: 100px 0 20px 0;
+    text-align: center;
+    background-color: #f5f4f2;
+    width: 373px;
+    margin: 0 20px;
+    /* z-index: -1; */
+}
+
+.card p{
+    width: 295px;
+    margin: 0 39px;
+}
+
+.card h4{
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+.card h3{
+    font-size: 40px;
+    color: #ffc61a;
+    padding: 40px 0px;
+}
+
+.card .read_more{
+    background-color: #ffc61a;
+    color: black;
+}
+
+.card:hover{
+    background-color: #ffc61a;
+}
+.card:hover .read_more{
+    background-color: black;
+    color: white;
+}
+.card:hover h3{
+    color: black;
+}
+
+#choose_us{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('pics/hay\ taxi.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+}
+
+#choose_us h2, #choose_us h3, #download h2, #download h3{
+    text-align: center;
+}
+
+#choose_us h2, #download h2{
+    color: white;
+    font-size: 32px;
+    margin: 5px;
+}
+
+#choose_us h3, #download h3{
+    font-size: 24px;
+    margin: 5px;
+}
+
+#choose_us p{
+    width: 366px;
+    color: white;
+}
+
+#choose_us .read_more{
+    color: black;
+    position: relative;
+    margin: 50px 42% 0;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 30px;
+}
+.container>div{
+    margin: 20px 50px;
+    display: flex;
+}
+
+.container>div>div>h4{
+    font-size: 24px;
+    margin: 0;
+}
+
+.circle{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 10px 20px; 
+} 
+.bg_cab_yellow{
+    background-color: #ffc61a;
+}
+
+.circle img{
+    position: relative;
+    top: 25px;
+    left: 25px;
+}
+.cap_yellow{
+    color: #ffc61a;
+}
+
+#download{
+    background-image: url('pics/phone\ app.png');
+    background-size: 470px 570px;
+    background-repeat: no-repeat;
+    background-position: right 12.16% bottom -30px;
+    padding: 100px 0 100px;
+    height: 520px;
+}
+
+#download h2{
+    color: black;
+    font-size: 42px;
+    margin: 0;
+    font-weight: 600;
+}
+
+#download h3{
+    font-size: 36px;
+    margin: 0;
+    font-weight: 600;
+}
+
+#download_text{
+
+    margin: 50px 0 0 20.7%;
+    width: 437px;
+    padding-bottom: 20px;
+}
+#download_text h4{
+    font-size: 23px;
+    font-weight: 600;
+}
+
+#download_text>div{
+    display: inline-block;
+    align-content: center;
+    height: 64px;
+    background-color: black;
+    border-radius: 37px;
+    padding: 5px 20px;
+    margin-top: 50px;
+}
+
+#download_text>div:first-of-type{
+    position: relative;
+    bottom: -5px;
+    margin-right: 20px;
+}
+
+#tests{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('pics/Testimonials\ bg.png');
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 85px 0 50px;
+}
+
+#tests>h3, #tests>h2{
+    text-align: center;
+    margin: 0;
+}
+
+#tests>h2{
+    color: white;
+    font-size: 36px;    
+}
+
+#tests>h3{
+    font-size: 30px;
+}
+
+.test_con{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0 0;
+    
+}
+
+.test{
+    width: 300px;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 50px;
+}
+
+.test p{
+    font-size: 12px;
+}
+
+.test img{
+    border-radius: 50%;
+    height: 34px;
+}
+
+.test>div{
+    display: inline-block;
+    bottom: 10px;
+}
+
+.test>div>h4, .test>div>h6{
+    margin: 0;
+}
+
+#contact{
+    text-align: center;
+    padding: 50px 0;
+}
+
+#contact h1{
+    font-size: 48px;
+    margin: 0;
+}
+
+#contact h3{
+    font-size: 22px;
+    margin: 0;
+}
+
+footer{
+    background-color: black;
+    color: white;
+}
+footer>div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.textcard{
+    width: 250px;
+    margin: 50px;
+
+}
+
+.textcard h4{
+    margin: 0;
+    font-size: 24px;
+}
+
+.contact>div{
+    display: flex;
+    margin: 0;
+    padding: 10px 0 ;
+}
+
+.contact h5{
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+svg{
+    height: 20px;
+    margin: 0 20px;
+}
+
+svg>path{
+    fill: white;
+}
+
+svg.cap_yellow{
+    margin: 20px 20px 0 0;
+}
+
+svg.cap_yellow>path{
+    fill: #ffc61a;
+}
