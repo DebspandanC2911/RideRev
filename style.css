@@ -57,7 +57,9 @@ main{
 }
 
 #hero{
-    background-image: url('pics/street.png');
+    position: relative;
+    background: linear-gradient(rgba(16, 0, 0, 0.700), rgba(16, 0, 0, 0.700)),
+    url(pics/indianstreet.jpg);
     background-size: cover;
     text-align: center;
     color: white;
@@ -66,6 +68,11 @@ main{
     line-height: 2px;
     background-color: rgba(0, 0, 0, 1);
     height: 676px;
+}
+.auto{
+    position: absolute;
+    right: 500px;
+    top: 390px;
 }
 
 #hero h1{
@@ -128,7 +135,7 @@ main{
 }
 
 #book_form{
-    height: 400px;
+    height: 350px;
     background-color: white;
 }
 
@@ -374,7 +381,7 @@ main{
 }
 
 #tests{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('pics/Testimonials\ bg.png');
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('pics/indian_students_0.jpg');
     /* background-position: center; */
     background-size: cover;
     background-repeat: no-repeat;
@@ -411,6 +418,8 @@ main{
     padding: 20px;
     margin: 50px;
 }
+
+
 
 .test p{
     font-size: 12px;
@@ -492,4 +501,24 @@ svg.cap_yellow{
 
 svg.cap_yellow>path{
     fill: #ffc61a;
+}
+.fa-android{
+    margin-left: 25px;
+    color: white;
+}
+.fa-app-store-ios{
+    margin-left: 56px;
+    color: #fff;
+}
+.fa-facebook{
+    color: #fff;
+    width: 30px;
+}
+.fa-youtube{
+    width: 30px;
+    color: #fff;
+}
+.fa-linkedin{
+    width: 30px;
+    color: #fff;
 }
