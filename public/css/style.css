@@ -59,7 +59,7 @@ main{
 #hero{
     position: relative;
     background: linear-gradient(rgba(16, 0, 0, 0.700), rgba(16, 0, 0, 0.700)),
-    url(pics/indianstreet.jpg);
+    url('../pics/indianstreet.jpg');
     background-size: cover;
     text-align: center;
     color: white;
@@ -263,7 +263,7 @@ main{
 }
 
 #choose_us{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('pics/hay\ taxi.png');
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../pics/hay\ taxi.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -332,7 +332,7 @@ main{
 }
 
 #download{
-    background-image: url('pics/phone\ app.png');
+    background-image: url('../pics/phone\ app.png');
     background-size: 470px 570px;
     background-repeat: no-repeat;
     background-position: right 12.16% bottom -30px;
@@ -381,7 +381,7 @@ main{
 }
 
 #tests{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('pics/indian_students_0.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../pics/indian_students_0.jpg');
     /* background-position: center; */
     background-size: cover;
     background-repeat: no-repeat;
