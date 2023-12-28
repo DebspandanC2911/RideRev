@@ -46,7 +46,7 @@ router.post('/', async (req, res,next) => {
 router.get('/' ,async (req, res) => {
     if ( req.cookies.jwt)
     {
-        res.redirect('/home')
+        res.redirect('/portfolio')
     }
     else
     res.render('login.ejs');
