@@ -2,7 +2,7 @@
 /* Add a background color to the chat screen */
 body {
     font-family: 'Roboto', sans-serif;
-    background: #e89d08;
+    background: #edeae2;
     background-size: cover;
     background-position: center center;
   }
@@ -12,7 +12,7 @@ body {
     margin: 0 auto;
     width: 600px;
     max-width: 100%;
-    background-color: #d6e660;
+    background: url(anime.png);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
