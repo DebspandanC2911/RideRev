@@ -32,7 +32,7 @@ app.use(
 );
 app.io = io ;
 // conect database
-mongoose.connect('mongodb://localhost:27017/RideRev',{
+mongoose.connect('mongodb://127.0.0.1/RideRev',{
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -43,7 +43,9 @@ var db = mongoose.connection;
 db.on('error', () => console.log("error in connecting database"));
 db.once('open', () => console.log("Connected to Database"));
 
-
+app.get("/feedback", function (request, result) {
+  result.render("feedback");
+});
 
 // userlogin route
 const userlogin = require('./routes/login')
@@ -101,7 +103,6 @@ app.use('/updateuserprofile', UpdateUserProfileRoute)
 // app.set("view engine", "ejs");
 // const portfolioRoute = require ('./routes/portfolio')
 // app.use("/portfolio", portfolioRoute) 
-
 
 
 const PORT = process.env.PORT || 3000;
