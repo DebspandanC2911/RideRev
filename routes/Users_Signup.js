@@ -33,7 +33,7 @@ async function handlePostRequest(req, res, userData) {
 }
 
 async function savedata(userData) {
-    const Userdata = await Users.findOne({ email: userData.email });
+    const Userdata = await Users.findOne({ aadharNumber: userData.aadharNumber });
     if (Userdata) {
         return false;
     } else {
@@ -41,6 +41,9 @@ async function savedata(userData) {
             name: userData.name,
             email: userData.email,
             password: userData.password,
+            phonenumber: userData.phno,
+            dateofbirth: userData.dob,
+            aadharNumber: userData.aadharNumber,
             Image:imageset()
         });
         
@@ -70,10 +73,10 @@ router.post('/', jsonParser,async (req, res) => {
 router.get('/'  , async (req, res) => {
     if ( req.cookies.jwt)
     {
-        res.redirect('/portfolio')
+        res.redirect('/login')
     }
    
-    res.render('login.ejs')
+    res.render('user_signup.ejs')
 });
 
 module.exports = router;

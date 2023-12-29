@@ -17,23 +17,6 @@ const UserSchema = new mongoose.Schema
         type:String,
         require:true,
     } ,
-    phonenumber:
-    {
-        type:Number,
-        require:true,
-    } ,
-    dateofbirth :
-    {
-        type:Date,
-        require:true,
-    } ,
-    aadharNumber :
-    {
-        type:String,
-        require:true,
-        unique:true
-    }
-    ,
     Image:
     {
         type:String,

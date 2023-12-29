@@ -26,7 +26,10 @@ router.post('/', async (req, res,next) => {
                 const userinfo = {
                     id : UserData._id ,
                 }
-                const token = jwt.sign(userinfo, process.env.JWT_SECRET_KEY, { expiresIn: '24h' });
+                console.log(process.env.JWT_SECRET_KEY);
+                const secretKey = process.env.JWT_SECRET_KEY || 'defaultSecretKey';
+                const token = jwt.sign(userinfo, secretKey, { expiresIn: '24h' });
+                // const token = jwt.sign(userinfo, process.env.JWT_SECRET_KEY, { expiresIn: '24h' });
                 res.cookie('jwt', token, { httpOnly: true });
                 res.status(200).json({
                     success: true,
@@ -46,10 +49,10 @@ router.post('/', async (req, res,next) => {
 router.get('/' ,async (req, res) => {
     if ( req.cookies.jwt)
     {
-        res.redirect('/portfolio')
+        res.redirect('/login')
     }
     else
-    res.render('login.ejs');
+    res.render('user_login.ejs');
 });
 
 module.exports = router;

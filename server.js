@@ -5,7 +5,7 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const socketio = require("socket.io");
-
+const dotenv = require('dotenv').config();
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
@@ -97,10 +97,10 @@ const UpdateUserProfileRoute = require('./routes/updateprofile')
 app.use('/updateuserprofile', UpdateUserProfileRoute)
 // Route for UserProfile ends
 
-// app.use("/public", express.static(__dirname + "/public"));
-// app.set("view engine", "ejs");
-// const portfolioRoute = require ('./routes/portfolio')
-// app.use("/portfolio", portfolioRoute) 
+app.use("/public", express.static(__dirname + "/public"));
+app.set("view engine", "ejs");
+const portfolioRoute = require ('./routes/portfolio')
+app.use("/portfolio", portfolioRoute) 
 
 
 
