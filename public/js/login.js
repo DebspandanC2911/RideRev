@@ -1,39 +1,94 @@
-const inputs = document.querySelectorAll(".input-field");
-const toggle_btn = document.querySelectorAll(".toggle");
-const main = document.querySelector("main");
-const bullets = document.querySelectorAll(".bullets span");
-const images = document.querySelectorAll(".image");
 
-inputs.forEach((inp) => {
-  inp.addEventListener("focus", () => {
-    inp.classList.add("active");
-  });
-  inp.addEventListener("blur", () => {
-    if (inp.value != "") return;
-    inp.classList.remove("active");
-  });
-});
+(function ($) {
+    "use strict";
 
-toggle_btn.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    main.classList.toggle("sign-up-mode");
-  });
-});
 
-function moveSlider() {
-  let index = this.dataset.value;
+    /*==================================================================
+    [ Validate ]*/
+    var input = $('.validate-input .input100');
 
-  let currentImage = document.querySelector(`.img-${index}`);
-  images.forEach((img) => img.classList.remove("show"));
-  currentImage.classList.add("show");
+    $('.validate-form').on('submit',function(){
+        var check = true;
 
-  const textSlider = document.querySelector(".text-group");
-  textSlider.style.transform = `translateY(${-(index - 1) * 2.2}rem)`;
+        for(var i=0; i<input.length; i++) {
+            if(validate(input[i]) == false){
+                showValidate(input[i]);
+                check=false;
+            }
+        }
 
-  bullets.forEach((bull) => bull.classList.remove("active"));
-  this.classList.add("active");
-}
+        return check;
+    });
 
-bullets.forEach((bullet) => {
-  bullet.addEventListener("click", moveSlider);
-});
+
+    $('.validate-form .input100').each(function(){
+        $(this).focus(function(){
+           hideValidate(this);
+        });
+    });
+
+    function validate (input) {
+        if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
+            if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+                return false;
+            }
+        }
+        else {
+            if($(input).val().trim() == ''){
+                return false;
+            }
+        }
+    }
+
+    function showValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).addClass('alert-validate');
+    }
+
+    function hideValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).removeClass('alert-validate');
+    }
+
+
+
+})(jQuery);
+
+
+document.getElementById('form').addEventListener('submit', function(event){
+
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const loginData = {
+        username : username ,
+        password : password ,
+    }
+    const url = 'http://localhost:3000/login'
+    const option = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(loginData),
+    }
+    fetch ( url , option )
+    .then ( response => {
+        return response.json();
+    })
+    .then ( data => {
+         if (data.success)
+         {
+            window.location.href='/portfolio';
+         }
+         else
+         {
+            document.getElementById('error-span').textContent = data.message ;
+         }
+    })
+    .then ( error => {
+        console.log(error);
+    })
+})
