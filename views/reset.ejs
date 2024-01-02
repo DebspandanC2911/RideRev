@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome User | RESET</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/otp.css">
+</head>
+
+<body>
+    <div class="main">
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="/public/images/otp.svg" alt="sing up image"></figure>
+                    </div>
+                    <div class="signin-form">
+                        <div id="password-form">
+                            <h2 class="form-title" id='password-form-heading'>Enter Password</h2>
+                            <form method="POST" class="register-form" id="login-form" action="verify">
+                                <div class="form-group">
+                                    <label for="password"><i class="fa fa-key" aria-hidden="true"></i></label>
+                                    <input type="password" name="otp" id="password"
+                                        placeholder="Enter Your new Password" autocomplete="off" required="true"
+                                        style="margin-top:2%;">
+                                </div>
+                                <div class="form-group form-button">
+                                    <input type="submit" name="signin" id="reset-password" class="form-submit"
+                                        value="Reset">
+                                </div>
+                            </form>
+                        </div>
+                        <span id="error-text" style="font-weight:bold;color:orange;font-size:larger"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    function getQueryParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+    document.getElementById('reset-password').addEventListener('click', function (e) {
+        e.preventDefault()
+        const data = getQueryParam('data')
+        const iv = getQueryParam('iv')
+        const passwordData = {
+            password: document.getElementById('password').value
+        }
+        const url = `http://localhost:3000/resetpassword/?data=${data}&iv=${iv}`
+        const option = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(passwordData),
+        }
+        fetch(url,option)
+        .then((response) => {
+            return response.json()
+        })
+        .then((data) => {
+            if (data.success)
+            {
+                window.location.href='/login'
+            }
+            else
+            {
+                document.getElementById('error-text').textContent=data.message;
+            }
+        })
+        .then((error) => {
+            console.log (error);
+        })
+    })
+</script>
+
+</html>
