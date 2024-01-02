@@ -1,7 +1,6 @@
 {
   "name": "riderev",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -31,5 +30,6 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
-  }
+  },
+  "description": ""
 }
