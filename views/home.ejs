@@ -35,10 +35,10 @@
                     <a href="/login" class="nav_link"  data-nav-link>BLOG</a>
                 </li>
                 <li class="nav_link">
-                    <a href="/login" class="nav_link"  data-nav-link>ORDER NOW</a>
+                    <a href="/login" class="nav_link" data-nav-link>ORDER NOW</a>
                 </li>
                 <li class="nav_link">
-                    <a href="/login" class="nav_link"  data-nav-link>LOGIN/SIGNUP</a>
+                    <a href="/login" class="nav_link" data-nav-link>LOGIN/SIGNUP</a>
                 </li>
                 
              </ul>
@@ -68,13 +68,18 @@
                 <h4>BEST IN BIT</h4>
                 <h1>TRUSTED AUTO SERVIES IN RANCHI</h1>
                 <p>The Ridesharing website for Birla Institute of Technology (BIT) serves as a vital link between students and Bit auto drivers, with a primary goal of enhancing convenience in payments and ensuring better availability tailored to the students' needs. This innovative platform not only simplifies the transportation process for students but also plays a crucial role in supporting auto drivers by expanding their customer base. By fostering a seamless connection between passengers and drivers, the ridesharing website contributes to a more efficient and accessible transportation system within the BIT community, benefiting both students and auto drivers alike.</p>
-                <button class="read_more">READ MORE</button>
+                <button class="read_more"><a href="/portfolio"> Get started </a></button>
             </div>
             <div id="book_form">
                 <h2 id="form_heading">BOOK <span style="color: #ffc61a;">NOW</span></h2>
                 <form action="">
+<<<<<<< HEAD
+                    <input type="text" name="name" id="name" placeholder="Pickup">
+                    <input type="tel" name="phone" id="phone" placeholder="Destination">
+=======
                     <input type="text" name="pickup" id="pickup" placeholder="Pickup">
                     <input type="text" name="drop" id="drop" placeholder="Drop">
+>>>>>>> 7d0b5c26644c1bca8b08b80312d2401c87fe8a74
                     <br>
                     <input type="date" name="when" id="when" placeholder="When">
                     <input type="time" name="time" id="time" placeholder="Time">
@@ -244,5 +249,13 @@
             </div>
         </footer>
     </main>
+
+    <script>
+        if ('<%= user %>') {
+          var loginlink = document.getElementById('login-link')
+          loginlink.textContent = 'LOGOUT';
+          loginlink.href = '/logout'
+        }
+    </script>
 </body>
 </html>

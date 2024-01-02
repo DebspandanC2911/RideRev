@@ -10,7 +10,7 @@ router.post('/', async (req, res,next) => {
         const UserData = await users.findOne({ email: loginData.username });
         
         if (!UserData) {
-            res.status(402).json({
+            res.status(401).json({
                 success: false,
                 message: "User is not registered with us"
             });
@@ -18,7 +18,7 @@ router.post('/', async (req, res,next) => {
             const checkpassword = await bcrypt.compare(loginData.password, UserData.password);
 
             if (!checkpassword) {
-                res.status(402).json({
+                res.status(401).json({
                     success: false,
                     message: "Wrong password"
                 });
@@ -49,7 +49,7 @@ router.get('/' ,async (req, res) => {
         res.redirect('/portfolio')
     }
     else
-    res.render('login.ejs');
+    res.render('user_login.ejs');
 });
 
 module.exports = router;
