@@ -12,12 +12,10 @@
     display: flex;
     z-index: 2;
     text-wrap: nowrap;
-    justify-content: center;
+    justify-content: left;
     
 }
-.fa-solid.fa-bars{
-    display: none;
-}
+
 
 .logo {
     color: var(--white);
