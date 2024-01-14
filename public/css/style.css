@@ -109,6 +109,58 @@ main{
     top: 220px;
 }
 
+/* Rotating-testimonial */
+.carousel{
+    height: 100vh;
+    perspective: 250px;
+}
+.carousel .carousel-item{
+    width: 450px;
+}
+.card {
+	position: relative;
+	margin: .5rem 0 1rem 0;
+	background-color: #fff;
+	width: 450px;
+	height: 379px;
+	color: #262626;
+	border-radius: 100px;
+	box-shadow: 0 8px 20px 0px rgba(0,0,0,0.2);
+}
+.img-area img {
+	border-radius: 50%;
+	border: 7px solid #fff;
+	margin-top: -80px;
+}
+
+.box1 {
+	background: #005bae;
+	height: 120px;
+	border-radius: 25px 25px 0 0;
+}
+.img-area {
+  text-align: center;
+}
+.img-area img {
+  width: 30%;
+}
+.main-text {
+	padding: 8px 0;
+	text-align: center;
+}
+.main-text h2 {
+	font-weight: 900;
+	font-size: 20px;
+	margin: 0 0 20px;
+	font-family: 'Alfa Slab One', cursive;
+}
+
+.main-text p{
+  font-size: 16px;
+  padding: 0 35px;
+}
+
+/* Uptil Here */
 #about{
     display: flex;
     flex-wrap: wrap;
@@ -275,6 +327,7 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all 0.5s ease-in;
     padding: 50px;
 }
 
@@ -389,7 +442,7 @@ main{
 }
 
 #tests{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../pics/indian_students_0.jpg');
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(235, 227, 227, 0.7));
     /* background-position: center; */
     background-size: cover;
     background-repeat: no-repeat;
