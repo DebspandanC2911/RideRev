@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Workociti">
+  <meta name="author" content="Workociti">
+  <meta name="keywords" content="Workociti">
+  <link rel="shortcut icon" href="./icons/favicon.svg" type="icon/svg+xml" />
+  <!-- Title Page-->
+  <title>RideRev</title>
+
+  <!-- Font special for pages-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+    rel="stylesheet">
+
+  <!-- Main CSS-->
+  <link href="/css/user_signup.css" rel="stylesheet" media="all">
+  <link rel="shortcut icon" href="./images/favicon.svg" type="image/svg+xml" />
+</head>
+
+<body>
+    <div class="alert alert-warning" role="alert"
+      style="background-color: yellow; text-align: center; font-weight: bold; color: black;"id='error-id'>
+      Account Not Registered With us. Please Register Your Account.
+    </div>
+    
+
+      <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+          <div class="card card-6">
+            <div class="card-heading">
+              <h2 class="title">Create Account</h2>
+            </div>
+            <div class="card-body">
+              <form action="/portfolio" method="POST" enctype="multipart/form-data" id="form">
+
+
+
+
+                <!--email-->
+                <div class="form-row">
+                  <div class="name">Email address</div>
+                  <div class="value">
+                    <div class="input-group">
+                      <input class="input--style-6" type="email" id="email" name="email" placeholder="example@email.com"
+                        required>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Password-->
+                <div class="form-row">
+                  <div class="name">Password</div>
+                  <div class="value">
+                    <div class="input-group">
+                      <input class="input--style-6" type="password" name="password" id="password" placeholder="">
+                    </div>
+                  </div>
+                </div>
+
+                <!--Confirm Password-->
+                <div class="form-row">
+                  <div class="name">Confirm Password</div>
+                  <div class="value">
+                    <div class="input-group">
+                      <input class="input--style-6" type="password" name="repass" placeholder="" id="cnf_password">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="form-row">
+                  <div class="name">Phone Number</div>
+                  <div class="value">
+                    <div class="input-group">
+                      <input class="input--style-6" type="text" name="phno" id="phno" placeholder="">
+                    </div>
+                  </div>
+                </div>
+
+                <!--name-->
+                <div class="form-row">
+                  <div class="name">Full name</div>
+                  <div class="value">
+                    <input class="input--style-6" type="text" id="name" name="name" placeholder="">
+                  </div>
+                </div>
+
+                <!--DOB-->
+                <div class="form-row">
+                  <div class="name">Date Of Birth</div>
+                  <div class="value">
+                    <input class="input--style-6" type="date" id="dob" name="dob" placeholder="">
+                  </div>
+                </div>
+
+                <!--gender-->
+                <div class="form-row">
+                  <div class="name col-lg-2">Gender</div>
+                  <div class="default-select" id="gender" name="gender">
+
+                    <select class="col-lg-10">
+                      <option value="1">Select Option</option>
+                      <option value="2">Male</option>
+                      <option value="3">Female</option>
+                    </select>
+                  </div>
+                </div>
+
+
+                <div class="form-row">
+                  <div class="name">Document</div>
+                  <!--Qualification-->
+
+                  <div>
+                    <div class=" form-row">
+                      <div class="name">Aadhar</div>
+                      <div class="value">
+                        <input class="input--style-6" type="number" name="aadhar" id="aadhar"
+                          placeholder="Aadhar Number" required>
+                      </div>
+                    </div>
+                    <div>
+                    </div>
+                    <!-- =============================================
+
+ ============================================= -->
+                    <!--Current Address-->
+                    <div class="form-row">
+                      <div class="name">Current Address</div>
+                      <div class="value">
+                        <div class="input-group">
+                          <textarea class="textarea--style-6" name="address" id="address"
+                            placeholder="Enter your Address"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <!--location-->
+                    <div class="form-row">
+                      <div class="name col-lg-2">Location</div>
+                      <div class="default-select" id="location">
+
+                        <select class="col-lg-6">
+                          <option value="1">India</option>
+                          <option value="1">Poland</option>
+                          <option value="1">New Zeland</option>
+                          <option value="1">Australia</option>
+                          <option value="1">China</option>
+                          <option value="1">United States</option>
+                          <option value="1">Brazil</option>
+                          <option value="1">Russia</option>
+                          <option value="1">Japan</option>
+                          <option value="1">Vietnam</option>
+                          <option value="1">Germany</option>
+                          <option value="1">Italy</option>
+                          <option value="1">Spain</option>
+
+                        </select>
+                      </div>
+                      <pre>     </pre>
+
+                      <div class="col-lg-4">
+                        <input class="input--style-6" type="text" name="city">
+
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="name">Message</div>
+                      <div class="value">
+                        <div class="input-group">
+                          <textarea class="textarea--style-6" name="message" id="message"
+                            placeholder="Message sent to the employer"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="form-row">
+                      <div class="name">Upload Aadhar Card</div>
+                      <div class="value">
+                        <div class="input-group js-input-file">
+                          <input class="input-file" type="file" name="file_cv" id="file">
+                          <label class="label--file" for="file">Choose file</label>
+                          <span class="input-file__info" id="file-info">No file chosen</span>
+                        </div>
+                        <div class="label--desc">Upload your Aadhar Card. Max file size 50 MB</div>
+                      </div>
+                    </div> -->
+              </form>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn--radius-2 btn--blue-2" type="submit">Verify</button>
+              <span id="error-span" style="color:red;margin-left:2%;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Jquery JS-->
+      <script src="./vendor/jquery/jquery.min.js"></script>
+      <!-- Main JS-->
+      <script src="/js/user_signup.js"></script>
+
+</body>
+<script>
+  document.getElementById('error-id').style.display = 'none';
+  const urlParams = new URLSearchParams(window.location.search);
+  const google = urlParams.get('account');
+  if (google)
+  {
+    document.getElementById('error-id').style.display = 'block';
+  }
+</script>
+</html>
+<!-- end document-->

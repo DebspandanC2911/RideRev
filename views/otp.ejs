@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome User | OTP</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/otp.css">
+</head>
+
+<body>
+    <div class="main">
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="/public/images/otp.svg" alt="sing up image"></figure>
+                    </div>
+                    <div class="signin-form">
+                        <div id="login-form">
+                            <h2 class="form-title" id='otp-form-heading'>Enter OTP</h2>
+                            <form method="POST" class="register-form" action="verify">
+                                <div class="form-group">
+                                    <label for="otp"><i class="fa fa-key" aria-hidden="true"></i></label>
+                                    <input type="text" name="otp" id="otp" placeholder="XXXXXX" autocomplete="off"
+                                        required="true">
+                                </div>
+                                <div class="form-group form-button">
+                                    <input type="submit" name="signin" id="verify-otp" class="form-submit"
+                                        value="Verify">
+                                </div>
+                            </form>
+                        </div>
+                        <form method="POST" class="register-form" id="login-form" action="resend">
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="resend-otp" class="form-submit" value="Resend OTP">
+                            </div>
+                        </form>
+                        <span id="error-text" style="font-weight:bold;color:orange;font-size:larger"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    function getQueryParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+    document.getElementById('verify-otp').addEventListener('click', function (e) {
+        e.preventDefault()
+        const data2 = getQueryParam('data2')
+        const iv2 = getQueryParam('iv2');
+        const data = getQueryParam('data')
+        const iv = getQueryParam('iv')
+        const otpData = {
+            otp: document.getElementById('otp').value
+        }
+        const url = `http://localhost:3000/otp/?data2=${data2}&iv2=${iv2}&data=${data}&iv=${iv}`
+        const option = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(otpData),
+        }
+        fetch(url, option)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                if (data.success) {
+                    const newdata = data.data
+                    const newiv = data.iv
+                    window.location.href=`/resetpassword/?data=${newdata}&iv=${newiv}`
+                }
+                else {
+                    document.getElementById('error-text').textContent = data.message;
+                }
+            })
+            .then((error) => {
+                console.log(error);
+            })
+    })
+    document.getElementById('resend-otp').addEventListener('click', function(event){
+        event.preventDefault();
+        window.location.href('/forgetpassword')
+    })
+</script>
+
+</html>
