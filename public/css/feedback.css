@@ -1,0 +1,61 @@
+body{
+    background-image: url("../pics/bg-fb4.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+
+.bg-white{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.938);
+    border-radius: 15px;
+    
+}
+.container{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.fa-regular{
+    font-size: 30px;
+}
+
+.fa-face-laugh:hover{
+    color: rgb(18, 240, 36);
+}
+.fa-face-smile:hover{
+    color: greenyellow;
+}
+.fa-face-meh:hover{
+    color: rgb(206, 206, 13);
+}
+.fa-face-frown:hover{
+    color: orange;
+}
+.fa-face-angry:hover{
+    color:rgb(255, 0, 0);
+}
+#ratings{
+    text-align: center;
+}
+.bg-white form > h3{
+    text-align: center;
+}
+#freeform{
+    min-width: 86%;
+    margin-left: 30px;
+    resize: none;
+    min-height: 100px;
+}
+.submit-button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 2%;
+    border-radius: 10%;
+}
