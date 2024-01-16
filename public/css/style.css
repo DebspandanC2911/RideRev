@@ -275,7 +275,7 @@ main{
 }
 
 #choose_us h2, #download h2{
-    color: white;
+    color: rgb(236, 227, 227);
     font-size: 32px;
     margin: 5px;
 }
@@ -319,7 +319,7 @@ main{
     margin: 10px 20px; 
 } 
 .bg_cab_yellow{
-    background-color: #ffc61a;
+    background-color: #e2e1dd;
 }
 
 .circle img{
