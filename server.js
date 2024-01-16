@@ -105,8 +105,8 @@ app.use('/generatepdf', pdfdownload)
 
 const paymentSuccess = require ('./routes/paymentSuccess')
 app.use('/payment-success', paymentSuccess);
-app.get("/contact_us", function (request, result) {
-  result.render("contact_us");
+app.get("/contact", function (request, result) {
+  result.render("contact");
 });
 
 // transaction route starts
@@ -120,6 +120,13 @@ const otpRoute = require('./routes/otp')
 app.use('/otp', otpRoute )
 // otp route ends
 
+app.get("/pricing", function (request, result) {
+  result.render("pricing");
+});
+
+app.get("/services", function (request, result) {
+  result.render("services");
+});
 
 // logout route
 const logoutRoute = require('./routes/logout');
