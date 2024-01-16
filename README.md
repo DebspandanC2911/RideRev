@@ -66,7 +66,7 @@ Please ensure that your code adheres to the project's coding standards, and all 
 Feel free to explore the code, use the website, and provide feedback. Happy riding! 🚀
 
    
-   ![Representation](public/pics/pic1.jpegg)
+   ![RideRev](public/pics/pic1.jpegg)
    ![Representation](sample/2.png)
    ![Representation](sample/3.png)
    ![Representation](sample/4.png)
