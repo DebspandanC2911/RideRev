@@ -24,10 +24,10 @@ RIDEREV is a  Ridesharing website for Birla Institute of Technology (BIT) serves
 Integrated MongoDB as the database management system, providing a scalable and efficient solution for user signup, login, and product management.
 
 ## Efficient Image Uploads:
-Utilized Multer for image uploads, allowing users to seamlessly add images to their product listings, enhancing the visual appeal of the listings.
+Image uploads, allowing users to seamlessly add images to their portfolio, enhancing the visual appeal of the listings.
 
 ## Dynamic and Responsive Frontend:
-Designed a dynamic and responsive frontend using HTML,CSS and JAVASCRIPT, enhancing user interaction and experience across various devices.
+Designed a dynamic and responsive frontend using HTML,CSS and JAVASCRIPT, enhancing user interaction and experience across various devices, allowing seamless and efficient navigation through pages.
   
 ## Driver Details and Contact Integration:
 Implemented a feature for users to view driver details and seamlessly contact them through our website , enhancing communication and trust between riders and drivers.
